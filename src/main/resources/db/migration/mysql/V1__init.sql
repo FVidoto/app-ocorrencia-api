@@ -6,7 +6,6 @@ CREATE TABLE `empresa` (
 `data_atualizacao` datetime NOT NULL 
 ) ENGINE = InnoDB DEFAULT CHARSET = utf8;
 
-
 ALTER TABLE `empresa`
 ADD PRIMARY KEY ( `id`);
 ALTER TABLE `empresa`
