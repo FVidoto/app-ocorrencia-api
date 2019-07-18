@@ -14,6 +14,6 @@ MODIFY `id` bigint ( 20 ) NOT NULL AUTO_INCREMENT;
 INSERT INTO `empresa` (`id`,`razao_social`,`cnpj`,`data_criacao`,`data_atualizacao`)
 VALUES ( NULL , 'Empresa ADMIN', '82198127000121' , CURRENT_DATE(), CURRENT_DATE());
 
-
+ 
 
 
