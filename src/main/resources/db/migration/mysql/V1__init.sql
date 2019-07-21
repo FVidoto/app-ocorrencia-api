@@ -52,3 +52,24 @@ INSERT INTO `usuario` (`id`,`email`,`senha`,`perfil`)
 VALUES ( NULL , 'fvidoto@gmail.com', '12345678' , 'ROLE_ADMIN');
 
 
+
+CREATE TABLE `ocorrencia` (
+`id` bigint ( 20 ) NOT NULL ,
+`data` datetime NOT NULL ,
+`tp_ocorrencia` varchar ( 255 ) NOT NULL,
+`descricao` varchar ( 255 ) NOT NULL ,
+`localizacao` varchar ( 255 ) NOT NULL ,
+`usuario` varchar ( 255 ) NOT NULL ,
+`data_criacao` datetime NOT NULL ,
+`data_atualizacao` datetime NOT NULL 
+) ENGINE = InnoDB DEFAULT CHARSET = utf8;
+
+ALTER TABLE `ocorrencia`
+ADD PRIMARY KEY ( `id`);
+ALTER TABLE `ocorrencia`
+MODIFY `id` bigint ( 20 ) NOT NULL AUTO_INCREMENT;
+
+INSERT INTO `ocorrencia` (`id`,`data`,`tp_ocorrencia`,`descricao`,`localizacao`,`usuario`,`data_criacao`,`data_atualizacao`)
+VALUES ( NULL , CURRENT_DATE(), 'PROBLEMA' , 'O EIXO QUEBROU', '-15,30', 'FVIDOTO','CURRENT_DATE()','CURRENT_DATE()');
+
+
