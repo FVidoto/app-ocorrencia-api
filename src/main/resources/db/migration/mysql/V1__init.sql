@@ -70,6 +70,24 @@ ALTER TABLE `ocorrencia`
 MODIFY `id` bigint ( 20 ) NOT NULL AUTO_INCREMENT;
 
 INSERT INTO `ocorrencia` (`id`,`data`,`tp_ocorrencia`,`descricao`,`localizacao`,`usuario`,`data_criacao`,`data_atualizacao`)
-VALUES ( NULL , CURRENT_DATE(), 'PROBLEMA' , 'O EIXO QUEBROU', '-15,30', 'FVIDOTO','CURRENT_DATE()','CURRENT_DATE()');
+VALUES ( NULL , CURRENT_DATE(), 'PROBLEMA' , 'O EIXO QUEBROU', '-15,30', 'FVIDOTO', CURRENT_DATE() , CURRENT_DATE());
+
+
+
+CREATE TABLE `produto` (
+`id` bigint ( 20 ) NOT NULL ,
+`codigo` varchar ( 255 ) NOT NULL,
+`descricao` varchar ( 255 ) NOT NULL ,
+`data_criacao` datetime NOT NULL ,
+`data_atualizacao` datetime NOT NULL 
+) ENGINE = InnoDB DEFAULT CHARSET = utf8;
+
+ALTER TABLE `produto`
+ADD PRIMARY KEY ( `id`);
+ALTER TABLE `produto`
+MODIFY `id` bigint ( 20 ) NOT NULL AUTO_INCREMENT;
+
+INSERT INTO `produto` (`id`, `codigo`,`descricao`,`data_criacao`,`data_atualizacao`)
+VALUES ( NULL, '0101010001' , 'ARADO FIXO', CURRENT_DATE() , CURRENT_DATE());
 
 
